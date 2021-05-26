@@ -8,11 +8,11 @@ To learn more about custom Serenade commands, check out the [Serenade Documentat
 
 ## Installing Custom Commands
 
-Custom Serenade commands live in the `~/.serenade/scripts` directory. Any file in that directory will automatically be loaded by the app as a custom command.
+Custom Serenade commands live in the `~/.serenade/scripts` directory (`C:\Users\<USERNAME>\.serenade\scripts` on Windows). Any file in that directory will automatically be loaded by the app as a custom command.
 
-To install all of the custom commands in this repositry, you can simply clone it to `~/.serenade/scripts`:
+To install all of the custom commands in this repository, you can simply clone it to `~/.serenade/scripts`:
 
-    git clone https://github.com/serenadeai/chrome.git ~/.serenade/scripts
+    git clone https://github.com/serenadeai/custom-commands.git ~/.serenade/scripts
 
 Or, if you'd only like install a specific commands file, you can just download it individually:
 
