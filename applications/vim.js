@@ -388,6 +388,7 @@ const spacevim_ids = [space_id1, space_id2, space_id3, space_id4, space_id5];
 
 // Disable everything by default
 vim_ids.map((id) => serenade.global().disable(id));
+vanilla_ids.map((id) => serenade.global().disable(id));
 spacevim_ids.map((id) => serenade.global().disable(id));
 
 // Enable / Disable Vanilla Vim
