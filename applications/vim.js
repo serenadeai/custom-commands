@@ -187,10 +187,12 @@ const id28 = serenade
     await api.pressKey("enter");
   });
 
-serenade.app("terminal").command("open vim <%text%>", async (api, cmd) => {
-  await api.typeText("v ");
-  await api.typeText(cmd.text);
-});
+// (This command was moved to `terminal.js`)
+
+// serenade.app("terminal").command("open vim <%text%>", async (api, cmd) => {
+  // await api.typeText("vim ");
+  // await api.typeText(cmd.text);
+// });
 
 const id29 = serenade.global().command("toggle case", async (api) => {
   await api.pressKey("~");
