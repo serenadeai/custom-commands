@@ -1,4 +1,4 @@
-// Enable Vim commands by saying "evil mode on" / "evil mode off"
+// Enable / Disable Vim commands by saying "evil mode on" / "evil mode off"
 
 // If using SpaceVim, say "space mode on" / "space mode off" instead
 
@@ -186,13 +186,6 @@ const id28 = serenade
     await api.typeText(cmd.text);
     await api.pressKey("enter");
   });
-
-// (This command was moved to `terminal.js`)
-
-// serenade.app("terminal").command("open vim <%text%>", async (api, cmd) => {
-  // await api.typeText("vim ");
-  // await api.typeText(cmd.text);
-// });
 
 const id29 = serenade.global().command("toggle case", async (api) => {
   await api.pressKey("~");

@@ -3,14 +3,6 @@ serenade.app("terminal").command("list", async (api) => {
   await api.pressKey("enter");
 });
 
-serenade.app("terminal").command("python", async (api) => {
-  await api.typeText("python ");
-});
-
-serenade.app("terminal").command("julia", async (api) => {
-  await api.typeText("julia ");
-});
-
 serenade.app("terminal").command("file copy", async (api) => {
   await api.typeText("cp ");
 });
@@ -33,6 +25,12 @@ serenade.app("terminal").command("cd", async (api) => {
   await api.typeText("cd ");
 });
 
+serenade.app("terminal").command("cd <%text%>", async (api, cmd) => {
+  await api.typeText("cd ");
+  await api.typeText(cmd.text);
+  await api.pressKey("tab")
+});
+
 serenade.app("terminal").command("open vim <%text%>", async (api, cmd) => {
   await api.typeText("vim ");
   await api.typeText(cmd.text);
@@ -43,10 +41,6 @@ serenade.app("terminal").command("open nvim <%text%>", async (api, cmd) => {
   await api.typeText(cmd.text);
 });
 
-serenade.app("terminal").command("cd <%text%>", async (api, cmd) => {
-  await api.typeText("cd ");
-  await api.typeText(cmd.text);
-});
 
 // ------
 // Conda
