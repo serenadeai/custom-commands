@@ -38,7 +38,6 @@ serenade.global().command("shift enter", async (api) => {
   await api.pressKey("enter", ["shift"]);
 });
 
-// other
 serenade.global().command("desktop", async (api) => {
   await api.pressKey("d", ["control", "windows"]);
 });
@@ -66,8 +65,6 @@ serenade.global().command("launch <%text%>", async (api, cmd) => {
   await new Promise((r) => setTimeout(r, 500));
   await api.pressKey("enter");
 });
-
-const delay = (action, time) => setTimeout(action, delay);
 
 serenade.global().command("shutdown", async (api) => {
   await api.pressKey("windows");
