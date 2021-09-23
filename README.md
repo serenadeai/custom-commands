@@ -1,4 +1,4 @@
-![Serenade Logo](https://cdn.serenade.ai/img/logo-small.png)
+<img src="https://cdn.serenade.ai/img/logo-github.png" width="250px" alt="Serenade Logo" />
 
 # Serenade Custom Command Examples
 
