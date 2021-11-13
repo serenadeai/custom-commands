@@ -23,6 +23,6 @@ Before submitting a Pull Request, make sure your new command follows these simpl
     * Framework-agnostic JavaScript commands would live in `languages/javascript/javascript.js`.
 * Inside of `applications/`, there should be a file per application.
     * For instance, custom commands for Safari would live in `applications/safari.js`.
-    * The directory `applications/system/` is used for platform-specific, system-wide automations, like switching desktops on macOS.
+* The directory `system/` is used for platform-specific, system-wide automations, like switching desktops on macOS.
 
 If you have any questions, reach out to the [Serenade Community](https://serenade.ai/community)!
