@@ -107,32 +107,6 @@ const press = async (shortcut, api) => {
   await api.pressKey(key, modifiers);
 };
 
-/**
- * Runs the provided callback after the specified number of milliseconds.
- */
-const runAfter = (callback, timeout) => {
-  return new Promise((resolve) => {
-    setTimeout(async () => {
-      await callback();
-      resolve();
-    }, timeout);
-  });
-};
-
-/**
- * Types some text after the specified number of milliseconds.
- */
-const typeAfter = (text, timeout, api) => {
-  return runAfter(async () => await api.typeText(text), timeout);
-};
-
-/**
- * Presses a shortcut after the specified number of milliseconds.
- */
-const pressAfter = (shortcut, timeout, api) => {
-  return runAfter(async () => await press(shortcut, api), timeout);
-};
-
 // --------------------- shortcut commands ---------------------
 
 for (const [command, shortcut] of Object.entries(zoomCommandsToShortuts)) {
