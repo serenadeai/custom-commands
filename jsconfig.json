@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "lib": [
+            "es2020"
+        ],
+        "module": "commonJS",
+        "target": "es2020",
+        "strictNullChecks": true,
+        "moduleResolution": "node",
+        "strict": true,
+        "typeRoots": [
+            "serenade.d.ts"
+        ],
+        "checkJs": true
+    }
+}
