@@ -4,7 +4,7 @@ serenade.global().command("find <%text%>", async (api, matches) => {
 });
 
 serenade.global().command("zoom in", async (api, matches) => {
-  await api.pressKeyStartOpen("+", ["commandOrControl"]);
+  await api.pressKey("+", ["commandOrControl"]);
 });
 
 serenade.global().command("zoom out", async (api, matches) => {
