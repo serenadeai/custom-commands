@@ -20,6 +20,24 @@ serenade.global().snippet(
 	},
 	"class"
 );
-serenade.language("c#").command("get and set", async (api) => {
-	await api.typeText(" { get; set;}");
-});
+serenade.language("c#").snippet(
+	"get and set",
+	" { get; set;}"
+);
+
+serenade.language("javascript").snippet(
+	"serenade evaluate in plugin",
+	'await api.evaluateInPlugin("<%cursor%>")'
+);
+serenade.language('javascript').snippet(
+	"new snippet <%language%> <%command%>",
+	'serenade.language("<%language%>").snippet(<%newline%>"<%command%>",<%newline%>"<%cursor%>"<%newline%>);'
+);
+serenade.language("javascript").snippet(
+"serenade type text",
+'await api.typeText("<%cursor%>");'
+);
+serenade.language("javascript").snippet(
+"enclosure",
+"<%<%cursor%>%>"
+);
