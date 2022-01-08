@@ -31,7 +31,7 @@ serenade.app("code").command("select all matching", async (api, matches) => {
 serenade.app("code").command("select matching <%number%>", async (api, matches) => {
 	const increment = parseInt(matches.number);
 	for (let index = 0; index < increment; index++) {
-		await api.evaluateInPlugin("openEditors.closeAll");
+	await api.evaluateInPlugin("editor.action.addSelectionToNextFindMatch")
 	}
 });
 serenade.app("code").command("select a language <%language%>", async (api, matches) => {
