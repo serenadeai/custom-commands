@@ -8,6 +8,13 @@ serenade
 serenade
   .language("javascript")
   .snippet(
+    "add functional component <%identifier%> and return value",
+    "const <%identifier%> = (<%cursor%>) => {\n return <%cursor%> }"
+  );
+
+serenade
+  .language("javascript")
+  .snippet(
     "add state <%getter%> set <%setter%>",
     "const [<%getter%>, set<%setter%>] = useState(null);",
     { getter: ["identifier", "camel"], setter: ["identifier", "pascal"] }
