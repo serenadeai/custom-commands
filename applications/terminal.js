@@ -31,56 +31,67 @@ serenade.app("terminal").command("cd <%text%>", async (api, cmd) => {
   await api.pressKey("tab")
 });
 
-serenade.app("terminal").command("open vim <%text%>", async (api, cmd) => {
-  await api.typeText("vim ");
-  await api.typeText(cmd.text);
+serenade.app("terminal").command("start of line", async (api, cmd) => {
+  await api.pressKey("a", ["control"])
 });
 
-serenade.app("terminal").command("open nvim <%text%>", async (api, cmd) => {
-  await api.typeText("nvim ");
-  await api.typeText(cmd.text);
+serenade.app("terminal").command("end of line", async (api, cmd) => {
+  await api.pressKey("e", ["control"])
 });
 
-
-// ------
-// Conda
-// ------
-
-serenade
-  .app("terminal")
-  .command("conda activate <%text%>", async (api, cmd) => {
-    await api.typeText("conda activate ");
-    await api.typeText(cmd.text);
-  });
-
-serenade.app("terminal").command("conda create <%text%>", async (api, cmd) => {
-  await api.typeText("conda create -n ");
-  await api.typeText(cmd.text);
-  await api.typeText(" python=3.9");
+serenade.app("terminal").command("next word", async (api, cmd) => {
+  await api.pressKey("right", ["option"])
 });
 
-serenade.app("terminal").command("conda deactivate", async (api) => {
-  await api.typeText("conda deactivate");
+serenade.app("terminal").command("previous word", async (api, cmd) => {
+  await api.pressKey("left", ["option"])
+});
+
+serenade.app("terminal").command("reload", async (api, cmd) => {
+  await api.typeText("reload!");
   await api.pressKey("enter");
 });
 
-serenade.app("terminal").command("conda env", async (api) => {
-  await api.typeText("conda info --envs");
+serenade.app("terminal").command("replay", async (api, cmd) => {
+  await api.typeText("reload!");
+  await api.pressKey("enter");
+  await api.pressKey("up");
+  await api.pressKey("up");
   await api.pressKey("enter");
 });
 
-serenade.app("terminal").command("jupiter notebook", async (api) => {
-  await api.typeText("jupyter notebook");
-  await api.pressKey("enter");
+serenade.app("terminal").command("clean", async (api, cmd) => {
+  await api.pressKey("k", ["command"])
 });
 
-serenade.app("terminal").command("jupyter notebook", async (api) => {
-  await api.typeText("jupyter notebook");
-  await api.pressKey("enter");
+serenade.app("terminal").command("continue", async (api, cmd) => {
+  await api.pressKey("q")
 });
 
-serenade.app("terminal").command("turn off jupiter", async (api) => {
-  await api.pressKey("c", ["control"]);
-  await api.pressKey("y");
-  await api.pressKey("enter");
+serenade.app("terminal").command("search", async (api, cmd) => {
+  await api.pressKey("r", ["ctrl"])
+});
+
+serenade.app("terminal").command("delete word", async (api, cmd) => {
+  await api.pressKey("w", ["ctrl"])
+});
+
+serenade.app("terminal").command("delete line", async (api, cmd) => {
+  await api.pressKey("k", ["ctrl"])
+});
+
+serenade.app("terminal").command("cancel", async (api, cmd) => {
+  await api.pressKey("c", ["ctrl"])
+});
+
+serenade.app("terminal").command("redo", async (api, cmd) => {
+  await api.pressKey("up")
+  await api.pressKey("enter")
+});
+
+serenade.app("terminal").command("retest", async (api, cmd) => {
+  await api.pressKey("c", ["ctrl"])
+  await api.pressKey("c", ["ctrl"])
+  await api.pressKey("up")
+  await api.pressKey("enter")
 });
