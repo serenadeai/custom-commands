@@ -4,7 +4,7 @@
  * See https://slack.com/help/articles/201374536-Slack-keyboard-shortcuts for the complete list.
  */
 
-const command = "command";
+const command = "commandOrControl";
 const option = "option";
 const shift = "shift";
 const control = "control";
